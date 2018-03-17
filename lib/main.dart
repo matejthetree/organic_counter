@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:organic_counter/config/app_config.dart';
+import 'package:organic_counter/view/counter_text.dart';
+import 'package:organic_counter/view/increment_button.dart';
 
-void main() => runApp(new MyApp());
+void main() {
+  new AppConfig();
+  runApp(new MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -43,18 +49,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -92,18 +86,11 @@ class _MyHomePageState extends State<MyHomePage> {
             new Text(
               'You have pushed the button this many times:',
             ),
-            new Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            new CounterText(),
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButton: new IncrementButton(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

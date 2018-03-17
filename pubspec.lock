@@ -214,6 +214,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.0"
+  organic_injector:
+    dependency: "direct main"
+    description:
+      path: "../organic_injector"
+      relative: true
+    source: path
+    version: "0.0.3"
   package_config:
     dependency: transitive
     description:
