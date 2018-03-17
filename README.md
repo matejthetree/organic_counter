@@ -4,5 +4,6 @@ A new Flutter project.
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+example project for organic_injector 
+[pub](https://pub.dartlang.org/packages/organic_injector).
+[github](https://github.com/matejthetree/organic_injector).
